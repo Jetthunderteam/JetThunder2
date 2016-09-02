@@ -1,3 +1,25 @@
 <!-- Main View -->
-<h1>JetThunder V2.0</h1>
+<section class="mainView">
+    <div class="container-fluid text-xs-center">
+        <div class="row-fluid">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 padding-none" ng-repeat="post in MainCtrl.posts">
+                <div class="mainItem">
+                    <div class="mainItemImage">
+                        <img class="img-responsive" ng-src="{{post.photoURL}}" alt="">
+                    </div>
+                    <div class="mainItemOverlay">
+                        <div class="mainItemOverlayContent">
+                            <div class="mainItemOverlayText">
+                                <div class="mainItemOverlayInfo">
+                                    <h3>{{post.postTitle}}</h3>
+                                    <p>{{post.postDate}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- /Main View -->

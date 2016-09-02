@@ -1,27 +1,26 @@
 /*************************
- Main Module
+ Footer Module
  **************************/
 (function () {
     'use strict';
 
     angular
-        .module('JetThunder2.main')
+        .module('JetThunder2.footer')
         /*************************
-         Main Controller
+         Footer Controller
          **************************/
-        .controller('MainCtrl', MainCtrl);
+        .controller('FooterCtrl', FooterCtrl);
 
     /*************************
      Controller Function
      **************************/
-    MainCtrl.$inject = ['authFactory'];
-    function MainCtrl(authFactory) {
+    FooterCtrl.$inject = ['utilsFactory'];
+    function FooterCtrl(utilsFactory) {
         var vm = this;
 
         /** Variables */
-
+        vm.copyrightDate = utilsFactory.getYear();
+        
         /** Function Initializers */
-        vm.posts = authFactory.getPosts();
-
     }
 })();

@@ -1,0 +1,45 @@
+/*************************
+Base Fonts
+**************************/
+$font-open-sans: 'Open Sans', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+$font-merriweather: 'Merriweather', serif;
+/*************************
+Base Colors
+**************************/
+$white: #fff;
+$black: #000;
+$primary-background: #fff;
+$secondary-background:#f4f4f4;
+$primary-color: #555964;
+$highlight-color: #1776a0;
+$transparent-background: transparent;
+/*************************
+Base Components
+**************************/
+$navbar-height:64px;
+$no-padding: 0;
+$no-margin:0;
+/*************************
+Base Borders
+**************************/
+$border-light: 1px solid #d9d9d9;
+/*************************
+Base Alerts
+**************************/
+$alert-blue: #007AA9;
+$alert-green: #47B350;
+$alert-yellow: #E3B000;
+$alert-red: #EA443D;
+/*************************
+Base Z-index
+**************************/
+$sidenav-zindex: 500;
+$menu-zindex: 450;
+$navbar-zindex: 400;
+$footer-zindex: 400;
+/*************************
+Base Flexbox
+**************************/
+@mixin flexRowStartCenter {display: flex; flex-direction: row; justify-content: flex-start; align-items: center;}
+

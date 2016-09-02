@@ -1,0 +1,28 @@
+<!-- Navbar -->
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="NavbarCtrl.openNavigation('left')" aria-label="Open Menu">
+            <md-icon class="navbarIcon">menu</md-icon>
+        </md-button>
+        <img class="navbarLogo" ng-src="app/images/logos/jetthunder-logo.png"/>
+        <img class="navbarMobileLogo" ng-src="app/images/logos/jetthunder-mobilelogo.png"/>
+        <div class="navbarProfile" ng-show="NavbarCtrl.user" ui-sref="secure.profile">
+            <img class="navbarProfileImage" src="app/images/logos/rebel_blue_mobile.png" />
+        </div>
+        <span flex=""></span>
+        <h2>
+            <span class="navbarTime">{{NavbarCtrl.clock}}</span>
+        </h2>
+        <span flex=""></span>
+        <h2>
+            <strong>{{ NavbarCtrl.likes.$value }}</strong>
+        </h2>
+        <md-button class="md-icon-button" ng-show="NavbarCtrl.user" ng-click="NavbarCtrl.likeUs()" aria-label="Like Us">
+            <md-icon class="navbarIcon">thumb_up</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Wifi">
+            <md-icon class="navbarIcon" ng-class="{wifiOnIcon: NavbarCtrl.onlineStatus.isOnline(), wifiOffIcon: !NavbarCtrl.onlineStatus.isOnline()}">wifi</md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<!-- /Navbar -->

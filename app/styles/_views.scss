@@ -1,0 +1,31 @@
+/*************************
+Views
+**************************/
+.view {height: calc(100% - #{$navbar-height});}
+@mixin awesomeView { background: rgba(46,128,171,1);
+  background: -moz-linear-gradient(45deg, rgba(46,128,171,1) 0%, rgba(91,176,212,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(46,128,171,1)), color-stop(100%, rgba(91,176,212,1)));
+  background: -webkit-linear-gradient(45deg, rgba(46,128,171,1) 0%, rgba(91,176,212,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(46,128,171,1) 0%, rgba(91,176,212,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(46,128,171,1) 0%, rgba(91,176,212,1) 100%);
+  background: linear-gradient(45deg, rgba(46,128,171,1) 0%, rgba(91,176,212,1) 100%); color:$primary-color; height: calc(100% - #{$navbar-height});}
+@mixin awesomeAlternateView { background: rgba(52,104,154,1);
+  background: -moz-linear-gradient(-45deg, rgba(52,104,154,1) 0%, rgba(101,204,203,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(52,104,154,1)), color-stop(100%, rgba(101,204,203,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(52,104,154,1) 0%, rgba(101,204,203,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(52,104,154,1) 0%, rgba(101,204,203,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(52,104,154,1) 0%, rgba(101,204,203,1) 100%);
+  background: linear-gradient(135deg, rgba(52,104,154,1) 0%, rgba(101,204,203,1) 100%); height: calc(100% - #{$navbar-height});}
+/*************************
+* Animations
+**************************/
+.view.ng-leave 	{ z-index:20; }
+.view.ng-enter 	{ z-index:10; }
+@mixin fadeOutAnimation {-webkit-animation:0.5s fadeOut ease; -moz-animation: 0.5s fadeOut; animation:0.8s fadeOut ease;}
+@mixin fadeInAnimation {-webkit-animation:0.5s fadeIn ease; -moz-animation: 0.5s fadeIn; animation:0.8s fadeIn ease; }
+/*************************
+* Main View
+**************************/
+.view-main { background:#F9F9F9; color:$primary-color; height: calc(100% - #{$navbar-height});}
+.view-main.ng-leave { position: absolute; left: 0; right: 0; @include fadeOutAnimation }
+.view-main.ng-enter { position: absolute; left: 0; right: 0; @include fadeInAnimation }

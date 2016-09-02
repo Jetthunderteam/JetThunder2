@@ -1,8 +1,8 @@
 /*************************
- Main Controller  Tests
+ Footer Controller  Tests
  **************************/
 'use strict';
-describe('JetThunder2 Main: Controller', function() {
+describe('JetThunder2 Footer: Controller', function() {
     var rootScope, scope, controller;
 
     beforeEach(function () {
@@ -10,11 +10,11 @@ describe('JetThunder2 Main: Controller', function() {
         inject(function ($rootScope, $controller) {
             rootScope = $rootScope;
             scope = $rootScope.$new();
-            controller = $controller('MainCtrl', {$scope: scope});
+            controller = $controller('FooterCtrl', {$scope: scope});
         });
     });
 
-    describe('Main Controller Tests', function () {
+    describe('Footer Controller Tests', function () {
         it('Should have a controller', function () {
             expect(controller).toBeDefined();
         });
