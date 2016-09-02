@@ -1,0 +1,42 @@
+{
+  "name": "JetThunder2",
+  "homepage": "https://jetthunderteam.github.io/JetThunder2/",
+  "authors": [
+    "JetThunder"
+  ],
+  "description": "Version 2.0 of JetThunder Blog",
+  "main": "index.html",
+  "keywords": [
+    "JetThunder",
+    "Blog"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "angular-moment": "^0.10.3",
+    "angular-ui-router": "^0.3.1",
+    "angular-material": "v1.1.0-rc.5",
+    "angular-bootstrap": "^2.1.3",
+    "angular-masonry": "^0.16.0",
+    "angular-mocks": "^1.5.8",
+    "animate.css": "^3.5.2",
+    "bootstrap": "v4.0.0-alpha.3",
+    "jquery": "^3.1.0",
+    "font-awesome": "^4.6.3",
+    "firebase": "^3.3.0",
+    "angularfire": "^2.0.2",
+    "angulartics-google-analytics": "^0.2.1"
+  }
+}

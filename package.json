@@ -1,0 +1,50 @@
+{
+  "name": "jetthunder2",
+  "version": "1.0.0",
+  "description": "Version 2.0 of JetThunder Blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jetthunderteam/JetThunder2.git"
+  },
+  "keywords": [
+    "JetThunder",
+    "Blog"
+  ],
+  "author": "JetThunder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jetthunderteam/JetThunder2/issues"
+  },
+  "homepage": "https://github.com/Jetthunderteam/JetThunder2#readme",
+  "devDependencies": {
+    "browser-sync": "^2.14.3",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-inject": "^4.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-plumber": "^1.1.0",
+    "gulp-remove-code": "^1.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "jasmine-core": "^2.5.0",
+    "karma": "^1.2.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-junit-reporter": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-requirejs": "^1.0.0",
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.12",
+    "run-sequence": "^1.2.2"
+  }
+}
