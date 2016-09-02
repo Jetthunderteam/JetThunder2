@@ -8,6 +8,28 @@ module.exports = function (config) {
         basePath: '',
 
         files: [
+            bowerComponents + 'jquery/dist/jquery.js',
+            bowerComponents + 'angular/angular.js',
+            bowerComponents + 'angular-ui-router/release/angular-ui-router.min.js',
+            bowerComponents + 'angular-mocks/angular-mocks.js',
+            bowerComponents + 'angular-animate/angular-animate.min.js',
+            bowerComponents + 'angular-aria/angular-aria.min.js',
+            bowerComponents + 'angular-messages/angular-messages.min.js',
+            bowerComponents + 'angular-material/angular-material.min.js',
+            bowerComponents + 'tether/dist/js/tether.min.js',
+            bowerComponents + 'angular-bootstrap/ui-bootstrap-tpls.min.js',
+            bowerComponents + 'moment/min/moment.min.js',
+            bowerComponents + 'firebase/firebase.js',
+            bowerComponents + 'angularfire/dist/angularfire.min.js',
+            bowerComponents + 'masonry/dist/masonry.pkgd.min.js',
+            bowerComponents + 'imagesloaded/imagesloaded.pkgd.min.js',
+            bowerComponents + 'angular-masonry/angular-masonry.js',
+            bowerComponents + 'angulartics/dist/angulartics.min.js',
+            bowerComponents + 'angulartics-google-analytics/dist/angulartics-ga.min.js',
+            app+'app.module.js',
+            app+'app.config.js',
+            app+'components/**/*.js',
+            app+'scripts/*.js',
             tests+'unit_tests/spec/*.js',
             tests+'unit_tests/spec/**/*.js',
             tests+'unit_tests/spec/components/*.js',
@@ -15,7 +37,8 @@ module.exports = function (config) {
         ],
 
         preprocessors: {
-
+            'app/*.js': ['coverage'],
+            'app/components/**/*.js': ['coverage']
         },
 
         reporters: ['progress', 'coverage'],

@@ -27,7 +27,7 @@
     /** Loads the Gulp Config from the main application folder */
     function loadGulpConfiguration() {
         return require('./gulpfile.config.js')();
-    };
+    }
 
     /*************************
      Development
