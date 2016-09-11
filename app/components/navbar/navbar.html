@@ -21,8 +21,33 @@
             <md-icon class="navbarIcon">thumb_up</md-icon>
         </md-button>
         <md-button class="md-icon-button" aria-label="Wifi">
-            <md-icon class="navbarIcon" ng-class="{wifiOnIcon: NavbarCtrl.onlineStatus.isOnline(), wifiOffIcon: !NavbarCtrl.onlineStatus.isOnline()}">wifi</md-icon>
+            <md-icon class="navbarIcon" ng-class="{navbarWifiOnIcon: $root.connection == true, navbarWifiOffIcon: $root.connection == false}">wifi</md-icon>
         </md-button>
+        <md-menu>
+            <md-button class="md-icon-button" ng-click="NavbarCtrl.openMenu($mdOpenMenu, $event)" aria-label="Account">
+                <md-icon class="navbarIcon">fingerprint</md-icon>
+            </md-button>
+            <md-menu-content width="4">
+                <md-menu-item>
+                    <md-button>
+                        <md-icon class="navbarIcon">account_circle</md-icon>
+                        My Profile
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        <md-icon class="navbarIcon">verified_user</md-icon>
+                        Sign In
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        <md-icon class="navbarIcon">power_settings_new</md-icon>
+                        Sign Out!
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
     </div>
 </md-toolbar>
 <!-- /Navbar -->

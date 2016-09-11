@@ -14,14 +14,48 @@
     /*************************
      Controller Function
      **************************/
-    MainCtrl.$inject = ['authFactory'];
-    function MainCtrl(authFactory) {
+    MainCtrl.$inject = ['$log', 'mainFactory', 'utilsFactory'];
+    function MainCtrl($log, mainFactory, utilsFactory) {
         var vm = this;
 
+        /** Activate */
+        vm.$onInit = activate;
+
         /** Variables */
+        vm.blogItems = {};
 
         /** Function Initializers */
-        vm.posts = authFactory.getPosts();
+        vm.beautifyUrl = beautifyUrl;
 
+        /**
+         * Activates the controller
+         * @returns {*}
+         */
+        function activate() {
+            return getBlogItems().then(function() {
+                $log.info('Activated blog posts');
+            });
+        }
+
+        /**
+         * Takes a given URL and removes any spaces
+         * @param {string} string - The URL
+         * @returns {string} string - The encoded URL
+         */
+        function beautifyUrl(string) {
+            utilsFactory.beautifyUrl(string);
+        }
+
+        /**
+         *
+         * @returns {*}
+         */
+        function getBlogItems() {
+            return mainFactory.getBlogItems()
+                .then(function(data) {
+                    vm.blogItems = data.entries;
+                    return vm.blogItems;
+                });
+        }
     }
 })();

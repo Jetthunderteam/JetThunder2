@@ -39,7 +39,7 @@
             server: {
                 baseDir: "./"
             },
-            browser: "google chrome"
+            browser: "Chrome"
         });
     });
 

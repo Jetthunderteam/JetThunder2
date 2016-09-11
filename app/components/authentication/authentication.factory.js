@@ -13,22 +13,10 @@
     /******************************
      * Service Function
      *******************************/
-    authFactory.$inject = ['$firebaseArray', '$firebaseObject', 'firebaseURL'];
-    function authFactory($firebaseArray, $firebaseObject, firebaseURL) {
-        var factory = {
-            getPosts: getPosts
+    authFactory.$inject = [];
+    function authFactory() {
+        return {
+
         };
-        var ref = new Firebase(firebaseURL);
-
-        /**
-         * Gets the current blog posts from Firebase
-         * @returns {array} posts - The current array of blog items
-         */
-        function getPosts() {
-            var posts = ref.child('blog').child('entries');
-            return $firebaseArray(posts);
-        }
-
-        return factory;
     }
 })();

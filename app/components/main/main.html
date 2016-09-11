@@ -2,8 +2,8 @@
 <section class="mainView">
     <div class="container-fluid text-xs-center">
         <div class="row-fluid">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 padding-none" ng-repeat="post in MainCtrl.posts">
-                <div class="mainItem">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 padding-none" ng-repeat="post in MainCtrl.blogItems">
+                <div class="mainItem" ui-sref="blog({post: post.postTitle})">
                     <div class="mainItemImage">
                         <img class="img-responsive" ng-src="{{post.photoURL}}" alt="">
                     </div>

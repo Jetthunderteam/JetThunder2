@@ -23,11 +23,21 @@
 
         /** Function Initializers */
         vm.$onInit = activate;
+        vm.openMenu = openMenu;
         vm.openNavigation = openNavigation;
 
         /** Activate */
         function activate() {
             $timeout(startClock, tickInterval);
+        }
+
+        /**
+         * Opens the account menu
+         * @param $mdOpenMenu
+         * @param event
+         */
+        function openMenu($mdOpenMenu, event) {
+            $mdOpenMenu(event);
         }
 
         /**

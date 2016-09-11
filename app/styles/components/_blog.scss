@@ -1,0 +1,29 @@
+/*************************
+Blog
+**************************/
+.blogView{}
+.blogSearch {background: transparent; color: $highlight-color; width: 100%; height: 60px; border: 0; font-size: 3.6rem; font-weight: 100; letter-spacing: 1rem; text-align: left; text-transform: uppercase; }
+.blogItem{background: $white;margin: 0;margin-bottom: 40px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);}
+.blogItemDate{}
+.blogItemTitle{padding-bottom: 40px;font-weight: 100;font-size: 5rem}
+.blogItemTags{}
+.blogItemTag{text-transform: uppercase;padding: 0.5rem}
+.blogItemImage{}
+.blogItemMeta{position: relative;z-index: 100;}
+.blogItemAuthor{display: block; width: 70px; height: 70px; border: 5px solid #fff; border-radius: 50%; overflow: hidden; margin: -35px auto 0;background: $primary-color}
+.blogItemAuthorImage{width: 100%}
+.blogItemSummary{}
+/*************************
+Media Queries
+**************************/
+// Extra small devices (portrait phones, less than 34em)
+@media (max-width: 33.9em) {}
+
+// Small devices (landscape phones, less than 48em)
+@media (max-width: 47.9em) {}
+
+// Medium devices (tablets, less than 62em)
+@media (max-width: 61.9em) {}
+
+// Large devices (desktops, less than 75em)
+@media (max-width: 74.9em) {}

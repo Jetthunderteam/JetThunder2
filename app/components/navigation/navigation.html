@@ -1,0 +1,18 @@
+<!-- Navigation -->
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+    <div class="md-toolbar-tools">
+        <h2>Navigation</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="NavigationCtrl.openNavigation('left')" aria-label="Close Menu">
+            <md-icon class="material-icons">&#xE5CD;</md-icon>
+        </md-button>
+    </div>
+    <md-list>
+        <md-list-item ng-click="NavigationCtrl.openNavigation('left')" ui-sref="main" role="link">
+            <md-icon class="material-icons">home</md-icon>
+            <p>Home</p>
+            <div class="md-secondary"><i class="fa fa-chevron-right"></i></div>
+        </md-list-item>
+    </md-list>
+</md-sidenav>
+<!-- /Navigation -->

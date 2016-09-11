@@ -51,6 +51,9 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #fff; }
 
+input:focus {
+  outline: 0; }
+
 /*************************
 Typography
 **************************/
@@ -166,10 +169,25 @@ md-toolbar.md-jetThunder2-theme {
   background-color: #fff !important;
   z-index: 400; }
 
+md-sidenav.md-jetThunder2-theme {
+  z-index: 500; }
+
 md-open-menu.md-jetThunder2-theme {
   z-index: 450; }
 
+md-list.md-jetThunder2-theme {
+  padding: 0 !important; }
+
+md-backdrop._md-menu-backdrop {
+  z-index: 410; }
+
+md-backdrop._md-sidenav-backdrop {
+  z-index: 410; }
+
 .md-open-menu-container.md-active {
+  z-index: 450; }
+
+._md-open-menu-container.md-jetThunder2-theme {
   z-index: 450; }
 
 /*************************
@@ -223,7 +241,7 @@ Components
 /*************************
 Main
 **************************/
-.mainView .container-fluid, .homeView .container-fluid .col-sm-3 {
+.mainView .container-fluid, .container-fluid .col-sm-3 {
   overflow: hidden;
   padding: 0; }
 
@@ -244,7 +262,7 @@ Main
   width: 100%; }
 
 .mainItemOverlay {
-  background-color: #000;
+  background-color: #1776a0;
   color: #fff;
   left: 0;
   right: 0;
@@ -273,6 +291,56 @@ Main
 .mainItemOverlayInfo h3 {
   margin-top: 0;
   color: #fff; }
+
+/*************************
+Media Queries
+**************************/
+/*************************
+Blog
+**************************/
+.blogSearch {
+  background: transparent;
+  color: #1776a0;
+  width: 100%;
+  height: 60px;
+  border: 0;
+  font-size: 3.6rem;
+  font-weight: 100;
+  letter-spacing: 1rem;
+  text-align: left;
+  text-transform: uppercase; }
+
+.blogItem {
+  background: #fff;
+  margin: 0;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
+
+.blogItemTitle {
+  padding-bottom: 40px;
+  font-weight: 100;
+  font-size: 5rem; }
+
+.blogItemTag {
+  text-transform: uppercase;
+  padding: 0.5rem; }
+
+.blogItemMeta {
+  position: relative;
+  z-index: 100; }
+
+.blogItemAuthor {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: -35px auto 0;
+  background: #555964; }
+
+.blogItemAuthorImage {
+  width: 100%; }
 
 /*************************
 Media Queries
@@ -323,6 +391,18 @@ Media Queries
   .navbarTime {
     display: none; } }
 
+/*************************
+Navigation
+**************************/
+.sideNavToolbar {
+  border-bottom: 1px solid #555964; }
+
+.sideNavIcon {
+  color: #555964 !important; }
+
+/*************************
+Media Queries
+**************************/
 /*************************
 Footer
 **************************/

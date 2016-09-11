@@ -5,6 +5,7 @@ html{font-size:62.5%;-webkit-text-size-adjust:62.5%;-ms-text-size-adjust:62.5%}
 html,html a{-webkit-font-smoothing:antialiased;text-shadow:1px 1px 1px rgba(0,0,0,0.004)}
 html,button,input,select,textarea{font-family:$font-raleway;font-weight:300;}
 body{margin:0;font-size:1.6rem;line-height:1.625;font-family:$font-raleway;background-color:$primary-background}
+input:focus{outline:0;}
 /*************************
 Typography
 **************************/
@@ -42,9 +43,14 @@ Section
 /*************************
 Material Components
 **************************/
-md-toolbar.md-jetThunder2-theme {background-color: $white !important; z-index: $navbar-zindex; }
-md-open-menu.md-jetThunder2-theme{z-index: $menu-zindex;}
-.md-open-menu-container.md-active{z-index: $menu-zindex;}
+md-toolbar.md-jetThunder2-theme {background-color: $white !important; z-index: $navbar-zindex}
+md-sidenav.md-jetThunder2-theme {z-index: $sidenav-zindex}
+md-open-menu.md-jetThunder2-theme{z-index: $menu-zindex}
+md-list.md-jetThunder2-theme{padding: 0 !important}
+md-backdrop._md-menu-backdrop{z-index: $backdrop-zindex}
+md-backdrop._md-sidenav-backdrop{z-index: $backdrop-zindex}
+.md-open-menu-container.md-active{z-index: $menu-zindex}
+._md-open-menu-container.md-jetThunder2-theme{z-index: $menu-zindex}
 /*************************
 Media Queries
 **************************/

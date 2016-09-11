@@ -5,7 +5,20 @@ module.exports = function (config) {
 
     config.set({
 
-        basePath: '',
+        basePath: '.',
+
+        plugins: [
+            'karma-chrome-launcher',
+            'karma-coverage',
+            'karma-coverage',
+            'karma-firefox-launcher',
+            'karma-jasmine',
+            'karma-junit-reporter',
+            'karma-ng-html2js-preprocessor',
+            'karma-ng-json2js-preprocessor',
+            'karma-phantomjs-launcher',
+            'karma-requirejs'
+        ],
 
         files: [
             bowerComponents + 'jquery/dist/jquery.js',
@@ -14,6 +27,7 @@ module.exports = function (config) {
             bowerComponents + 'angular-mocks/angular-mocks.js',
             bowerComponents + 'angular-animate/angular-animate.min.js',
             bowerComponents + 'angular-aria/angular-aria.min.js',
+            bowerComponents + 'angular-sanitize/angular-sanitize.min.js',
             bowerComponents + 'angular-messages/angular-messages.min.js',
             bowerComponents + 'angular-material/angular-material.min.js',
             bowerComponents + 'tether/dist/js/tether.min.js',
@@ -28,17 +42,32 @@ module.exports = function (config) {
             bowerComponents + 'angulartics-google-analytics/dist/angulartics-ga.min.js',
             app+'app.module.js',
             app+'app.config.js',
+            app+'app.run.js',
             app+'components/**/*.js',
-            app+'scripts/*.js',
             tests+'unit_tests/spec/*.js',
             tests+'unit_tests/spec/**/*.js',
-            tests+'unit_tests/spec/components/*.js',
-            tests+'unit_tests/spec/components/**/*.js'
+            tests+'unit_tests/spec/components/**/*.js',
+            tests+'unit_tests/fixtures/*.json'
         ],
 
         preprocessors: {
             'app/*.js': ['coverage'],
-            'app/components/**/*.js': ['coverage']
+            'app/components/**/*.js': ['coverage'],
+            'app/components/**/*.html': ['ng-html2js'],
+            'tests/unit_tests/fixtures/*.json': ['ng-json2js']
+        },
+
+        ngHtml2JsPreprocessor: {
+            cacheIdFromPath: function(filepath) {
+                return filepath.substr(filepath.indexOf("components")+10);
+            },
+            moduleName: "html-templates"
+        },
+
+        ngJson2JsPreprocessor: {
+            cacheIdFromPath: function(filepath) {
+                return filepath.substr(filepath.indexOf("fixtures")+9);
+            }
         },
 
         reporters: ['progress', 'coverage'],
@@ -53,13 +82,20 @@ module.exports = function (config) {
             ]
         },
 
+        autoWatch : true,
+
+        singleRun: true,
+
         port: 9876,
 
-        logLevel: config.LOG_INFO,
-
-        autoWatch: true,
+        logLevel: config.LOG_DEBUG,
 
         browsers: ['PhantomJS'],
+
+        junitReporter : {
+            outputFile: 'test_out/unit.xml',
+            suite: 'unit'
+        },
 
         frameworks: ['jasmine']
 

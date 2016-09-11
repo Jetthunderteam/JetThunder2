@@ -15,11 +15,23 @@
      *******************************/
     utilsFactory.$inject = [];
     function utilsFactory() {
-        var factory = {
+        return {
+            beautifyUrl: beautifyUrl,
             getMoment: getMoment,
             getTime: getTime,
             getYear: getYear
         };
+
+        /**
+         * Takes a given URL and removes any spaces
+         * @param {string} string - The URL
+         * @returns {string} string - The encoded URL
+         */
+        function beautifyUrl(string) {
+            console.log(string);
+            string = string.replace(/ /g, '-');
+            return string;
+        }
 
         /**
          * Gets the current moment
@@ -44,7 +56,5 @@
         function getYear() {
             return getMoment().format('YYYY');
         }
-
-        return factory;
     }
 })();

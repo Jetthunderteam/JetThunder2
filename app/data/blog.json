@@ -1,0 +1,44 @@
+{
+  "entries" : [{
+    "id":1,
+    "link" : "",
+    "photoURL" : "app/images/blog/blog-cornwallFlight.png",
+    "postContent" : "During November 2015, Matt and myself went on a 2 hour round trip to Cornwall, taking a northern coast route there, and a southern coast route back on the inboud leg to Dunkeswell.  We took off from Dunkeswell as planned at 09:00 local time from runway 35, the shorter of the two runways at Dunkeswell, with a slight crosswind, making the climb out crabbed and a tad rough, due to the wind increasing and dropping continuously. We left the circuit on the climb out, and the cold weather was present, with frost clearly visible on the ground, and the cabin heater on full. <br/><br/> On the way towards Cornwall we climbed up to 7000ft on the QNH to get above the few clouds, with the weather meaning it was VFR above. Approaching Newquay, and at a lower altitude, the controller allowed us to pass directly through the overhead, whilst a Dash 8 was making its final approach turn. We then routed over the clay pits, which made for an amazing view from a different perspective. Onwards from this we headed for the Eden Project, which was a short distance along the coast, but well worthwhile, as it is an amazing landmark which is even better when viewed from above. After circling the big glass domes, we routed back along the south coast towards Berryhead VOR, where the frost was no longer present, and the weather had dramatically improved. This was until we turned towards Dunkeswell, at which we noticed the huge grey mass of overcast cloud, just above the circuit height of Dunkeswell, enabling us to get in safely for a nice cup of tea!",
+    "postDate" : "April 24",
+    "postSubTitle" : "",
+    "postTags" : [ "Flying", "Lifestyle" ],
+    "postTitle" : "Trip to Cornwall",
+    "url" : ""
+  }, {
+    "id":2,
+    "link" : "",
+    "photoURL" : "app/images/blog/blog-comptonFlight.png",
+    "postContent" : "Last summer we embarked upon a trip to Compton Abbas, which is due east of Dunkeswell. We flew there in a Cessna 172, a fantastic aircraft for a grass landing, and a steady cruise of 100kts there and back.  The weather on the day was perfect, not a cloud in sight, with just sunny and blue skies ahead, which for Dunkeswell is a rare occurrence. We took off and headed towards a lake just south of Yeovil, to avoid all of the surrounding airspace. Enclosing in on Compton, we scanned for the airfield, which we had been told can be difficult to spot for a first flight there. After finder the location of the airfield, and gaining visual sight of it, Matt joined downwind for runway 26. The approach was a little bumpy, especially as we came over the ridge line. I was surprised on landing how lumpy the grass runway was, but having not experienced a grass field landing before, it was interesting.  After this we were instructed where was best to park our 172, which was at the end of a long line of other aircraft. We then went and had lunch in the cafe, which was busy despite the fact there wasnt a great deal of parked aircraft, but the queue jump for visiting pilots was a nice touch, and allowed us to eat quickly, before returning the aircraft to Dunkeswell.  The flight back was normal, and we took a wider route via the north of Yeovilton, to again, stay well clear of their zone. One the way back we flew over Cranmore, Glastonbury, and Taunton, which gave me the opportunity to circle my uncles farm.  Overall the journey was fantastic, and i would highly recommend Compton Abbas to anyone thinking of visiting there, as it is a fantastic GA airfield, which is always very busy, with fantastic facilities.",
+    "postDate" : "May",
+    "postSubTitle" : "",
+    "postTags" : [ "Flying", "Lifestyle" ],
+    "postTitle" : "Flight to Compton",
+    "url" : ""
+  }, {
+    "id":3,
+    "link" : "",
+    "photoURL" : "app/images/blog/blog-newMazda.png",
+    "postContent" : "",
+    "postDate" : "",
+    "postSubTitle" : "",
+    "postTags" : [ "Lifestyle", "Motoring" ],
+    "postTitle" : "Mazda RX8",
+    "url" : ""
+  }, {
+    "id":4,
+    "link" : "",
+    "photoURL" : "app/images/blog/blog-raspberryPi.png",
+    "postContent" : "",
+    "postDate" : "",
+    "postSubTitle" : "",
+    "postTags" : [ "Lifestyle", "Technology" ],
+    "postTitle" : "Raspberry Pi",
+    "url" : ""
+  }],
+  "title" : "JetThunder Blog Posts"
+}

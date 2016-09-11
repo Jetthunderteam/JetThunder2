@@ -36,6 +36,7 @@
 <body>
 <!-- Components -->
 <navbar-directive></navbar-directive>
+<navigation-directive></navigation-directive>
 <footer-directive></footer-directive>
 <!-- /Components -->
 
@@ -47,6 +48,7 @@
 <script src="app/bower_components/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript"></script>
 <script src="app/bower_components/angular-animate/angular-animate.min.js" type="text/javascript"></script>
 <script src="app/bower_components/angular-aria/angular-aria.min.js" type="text/javascript"></script>
+<script src="app/bower_components/angular-sanitize/angular-sanitize.min.js" type="text/javascript"></script>
 <script src="app/bower_components/angular-messages/angular-messages.min.js" type="text/javascript"></script>
 <script src="app/bower_components/angular-material/angular-material.min.js" type="text/javascript"></script>
 <script src="app/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
@@ -67,6 +69,7 @@
 <!-- Application -->
 <script src="app/app.module.js" type="text/javascript"></script>
 <script src="app/app.config.js" type="text/javascript"></script>
+<script src="app/app.run.js" type="text/javascript"></script>
 <!-- /Application-->
 
 <!-- Authentication -->
@@ -76,12 +79,22 @@
 
 <!-- Main -->
 <script src="app/components/main/main.controller.js" type="text/javascript"></script>
+<script src="app/components/main/main.factory.js" type="text/javascript"></script>
+<!-- /Main -->
+
+<!-- Main -->
+<script src="app/components/blog/blog.controller.js" type="text/javascript"></script>
 <!-- /Main -->
 
 <!-- Navbar -->
 <script src="app/components/navbar/navbar.controller.js" type="text/javascript"></script>
 <script src="app/components/navbar/navbar.directive.js" type="text/javascript"></script>
 <!-- /Navbar -->
+
+<!-- Navigation -->
+<script src="app/components/navigation/navigation.controller.js" type="text/javascript"></script>
+<script src="app/components/navigation/navigation.directive.js" type="text/javascript"></script>
+<!-- /Navigation -->
 
 <!-- Footer -->
 <script src="app/components/footer/footer.controller.js" type="text/javascript"></script>
@@ -90,6 +103,7 @@
 
 <!-- Utils -->
 <script src="app/components/utils/utils.factory.js" type="text/javascript"></script>
+<script src="app/components/utils/urls.factory.js" type="text/javascript"></script>
 <!-- /Utils -->
 
 <!-- Angulartics -->

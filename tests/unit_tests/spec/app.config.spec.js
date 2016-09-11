@@ -3,7 +3,7 @@
  **************************/
 'use strict';
 describe('JetThunder2: Config', function() {
-    var rootScope, state, injector, mockState = 'main';
+    var rootScope, state, injector, mockState;
 
     beforeEach(function () {
         module('JetThunder2');
@@ -16,7 +16,12 @@ describe('JetThunder2: Config', function() {
 
     describe('JetThunder Config Tests', function () {
         it('Should respond to the main URL', function () {
+            mockState = 'main';
             expect(state.href(mockState)).toEqual('#/');
+        });
+        it('Should respond to the blog URL', function () {
+            mockState = 'blog';
+            expect(state.href(mockState)).toEqual('#/blog');
         });
     });
 });

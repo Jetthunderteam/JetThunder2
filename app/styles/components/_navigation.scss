@@ -1,0 +1,19 @@
+/*************************
+Navigation
+**************************/
+.sideNavToolbar{border-bottom: 1px solid $primary-color;}
+.sideNavIcon{color:$primary-color !important;}
+/*************************
+Media Queries
+**************************/
+// Extra small devices (portrait phones, less than 34em)
+@media (max-width: 33.9em) {}
+
+// Small devices (landscape phones, less than 48em)
+@media (max-width: 47.9em) {}
+
+// Medium devices (tablets, less than 62em)
+@media (max-width: 61.9em) {}
+
+// Large devices (desktops, less than 75em)
+@media (max-width: 74.9em) {}
