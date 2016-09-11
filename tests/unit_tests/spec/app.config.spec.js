@@ -20,6 +20,10 @@ describe('JetThunder2: Config', function() {
             expect(state.href(mockState)).toEqual('#/');
         });
         it('Should respond to the blog URL', function () {
+            mockState = 'jetThunder';
+            expect(state.href(mockState)).toEqual('#/jetThunder');
+        });
+        it('Should respond to the blog URL', function () {
             mockState = 'blog';
             expect(state.href(mockState)).toEqual('#/blog');
         });

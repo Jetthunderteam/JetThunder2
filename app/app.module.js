@@ -14,6 +14,7 @@
         'angulartics',
         'angulartics.google.analytics',
         'JetThunder2.authentication',
+        'JetThunder2.jetThunder',
         'JetThunder2.main',
         'JetThunder2.blog',
         'JetThunder2.navbar',
@@ -26,6 +27,7 @@
     angular.module('JetThunder2.authentication', []);
 
     //Views
+    angular.module('JetThunder2.jetThunder', []);
     angular.module('JetThunder2.main', []);
     angular.module('JetThunder2.blog', []);
 

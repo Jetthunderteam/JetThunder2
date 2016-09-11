@@ -4,8 +4,8 @@
         <md-button class="md-icon-button" ng-click="NavbarCtrl.openNavigation('left')" aria-label="Open Menu">
             <md-icon class="navbarIcon">menu</md-icon>
         </md-button>
-        <img class="navbarLogo" ng-src="app/images/logos/jetthunder-logo.png"/>
-        <img class="navbarMobileLogo" ng-src="app/images/logos/jetthunder-mobilelogo.png"/>
+        <img class="navbarLogo" ng-src="app/images/logos/jetthunder-logo.png" ui-sref="jetThunder"/>
+        <img class="navbarMobileLogo" ng-src="app/images/logos/jetthunder-mobilelogo.png" ui-sref="jetThunder"/>
         <div class="navbarProfile" ng-show="NavbarCtrl.user" ui-sref="secure.profile">
             <img class="navbarProfileImage" src="app/images/logos/rebel_blue_mobile.png" />
         </div>

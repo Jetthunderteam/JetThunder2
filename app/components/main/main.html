@@ -5,7 +5,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 padding-none" ng-repeat="post in MainCtrl.blogItems">
                 <div class="mainItem" ui-sref="blog({post: post.postTitle})">
                     <div class="mainItemImage">
-                        <img class="img-responsive" ng-src="{{post.photoURL}}" alt="">
+                        <img class="img-responsive" ng-src="app/images/blog/blog-{{post.photoURL}}" alt="">
                     </div>
                     <div class="mainItemOverlay">
                         <div class="mainItemOverlayContent">

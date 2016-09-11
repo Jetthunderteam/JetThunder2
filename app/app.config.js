@@ -19,6 +19,12 @@
                 controller: "MainCtrl",
                 controllerAs: "MainCtrl"
             })
+            .state('jetThunder', {
+                url: '/jetThunder',
+                templateUrl: 'app/components/jetThunder/jetThunder.html',
+                controller: "JetThunderCtrl",
+                controllerAs: "JetThunderCtrl"
+            })
             .state('blog', {
                 url: '/blog?post',
                 templateUrl: 'app/components/blog/blog.html',

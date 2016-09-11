@@ -43,4 +43,5 @@ $footer-zindex: 400;
 Base Flexbox
 **************************/
 @mixin flexRowStartCenter {display: flex; flex-direction: row; justify-content: flex-start; align-items: center;}
+@mixin flexRowBetweenCenter {display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
 
