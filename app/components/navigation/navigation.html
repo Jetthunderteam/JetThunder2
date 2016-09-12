@@ -5,13 +5,26 @@
         <span flex></span>
         <md-button class="md-icon-button" ng-click="NavigationCtrl.openNavigation('left')" aria-label="Close Menu">
             <md-icon class="material-icons">&#xE5CD;</md-icon>
+            <md-tooltip md-delay="500">
+                Close Menu
+            </md-tooltip>
         </md-button>
     </div>
     <md-list>
         <md-list-item ng-click="NavigationCtrl.openNavigation('left')" ui-sref="main" role="link">
-            <md-icon class="material-icons">home</md-icon>
+            <md-icon class="material-icons">important_devices</md-icon>
             <p>Home</p>
-            <div class="md-secondary"><i class="fa fa-chevron-right"></i></div>
+            <div class="md-secondary"><md-icon class="material-icons">keyboard_arrow_right</md-icon></div>
+        </md-list-item>
+        <md-list-item ng-click="NavigationCtrl.openNavigation('left')" ui-sref="blog" role="link">
+            <md-icon class="material-icons">headset_mic</md-icon>
+            <p>Blog</p>
+            <div class="md-secondary"><md-icon class="material-icons">keyboard_arrow_right</md-icon></div>
+        </md-list-item>
+        <md-list-item ng-click="NavigationCtrl.openNavigation('left')" ui-sref="jetThunder" role="link">
+            <md-icon class="material-icons">account_circle</md-icon>
+            <p>Author</p>
+            <div class="md-secondary"><md-icon class="material-icons">keyboard_arrow_right</md-icon></div>
         </md-list-item>
     </md-list>
 </md-sidenav>

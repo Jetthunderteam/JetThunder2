@@ -3,6 +3,9 @@
     <div class="md-toolbar-tools">
         <md-button class="md-icon-button" ng-click="NavbarCtrl.openNavigation('left')" aria-label="Open Menu">
             <md-icon class="navbarIcon">menu</md-icon>
+            <md-tooltip md-delay="500">
+                Menu
+            </md-tooltip>
         </md-button>
         <img class="navbarLogo" ng-src="app/images/logos/jetthunder-logo.png" ui-sref="jetThunder"/>
         <img class="navbarMobileLogo" ng-src="app/images/logos/jetthunder-mobilelogo.png" ui-sref="jetThunder"/>
@@ -22,10 +25,16 @@
         </md-button>
         <md-button class="md-icon-button" aria-label="Wifi">
             <md-icon class="navbarIcon" ng-class="{navbarWifiOnIcon: $root.connection == true, navbarWifiOffIcon: $root.connection == false}">wifi</md-icon>
+            <md-tooltip md-delay="500">
+                Connection Status
+            </md-tooltip>
         </md-button>
         <md-menu>
             <md-button class="md-icon-button" ng-click="NavbarCtrl.openMenu($mdOpenMenu, $event)" aria-label="Account">
                 <md-icon class="navbarIcon">fingerprint</md-icon>
+                <md-tooltip md-delay="500">
+                    Identity
+                </md-tooltip>
             </md-button>
             <md-menu-content width="4">
                 <md-menu-item>

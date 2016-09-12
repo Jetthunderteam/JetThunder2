@@ -43,7 +43,7 @@
          * @returns {string} string - The encoded URL
          */
         function beautifyUrl(string) {
-            utilsFactory.beautifyUrl(string);
+            return utilsFactory.beautifyUrl(string);
         }
 
         /**

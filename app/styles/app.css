@@ -49,7 +49,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.625;
   font-family: "Raleway", sans-serif;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow: hidden; }
 
 input:focus {
   outline: 0; }
@@ -165,6 +166,9 @@ Section
 /*************************
 Material Components
 **************************/
+md-tooltip {
+  z-index: 1000; }
+
 md-toolbar.md-jetThunder2-theme {
   background-color: #fff !important;
   z-index: 400; }
@@ -191,6 +195,12 @@ md-backdrop._md-sidenav-backdrop {
   z-index: 450; }
 
 /*************************
+Please Wait
+**************************/
+.splashMessage {
+  color: #fff; }
+
+/*************************
 Media Queries
 **************************/
 @media (max-width: 33.9em) {
@@ -210,29 +220,11 @@ Views
 * Animations
 **************************/
 .view.ng-leave {
-  z-index: 20; }
-
-.view.ng-enter {
-  z-index: 10; }
-
-/*************************
-* Main View
-**************************/
-.view-main {
-  background: #F9F9F9;
-  color: #555964;
-  height: calc(100% - 64px); }
-
-.view-main.ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
+  z-index: 20;
   animation: 0.8s fadeOut ease; }
 
-.view-main.ng-enter {
-  position: absolute;
-  left: 0;
-  right: 0;
+.view.ng-enter {
+  z-index: 10;
   animation: 0.8s fadeIn ease; }
 
 /*************************

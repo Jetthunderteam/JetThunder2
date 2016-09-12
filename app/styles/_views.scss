@@ -19,13 +19,10 @@ Views
 /*************************
 * Animations
 **************************/
-.view.ng-leave 	{ z-index:20; }
-.view.ng-enter 	{ z-index:10; }
 @mixin fadeOutAnimation {-webkit-animation:0.5s fadeOut ease; -moz-animation: 0.5s fadeOut; animation:0.8s fadeOut ease;}
 @mixin fadeInAnimation {-webkit-animation:0.5s fadeIn ease; -moz-animation: 0.5s fadeIn; animation:0.8s fadeIn ease; }
-/*************************
-* Main View
-**************************/
-.view-main { background:#F9F9F9; color:$primary-color; height: calc(100% - #{$navbar-height});}
-.view-main.ng-leave { position: absolute; left: 0; right: 0; @include fadeOutAnimation }
-.view-main.ng-enter { position: absolute; left: 0; right: 0; @include fadeInAnimation }
+.view.ng-leave 	{ z-index:20; @include fadeOutAnimation}
+.view.ng-enter 	{ z-index:10; @include fadeInAnimation}
+
+
+

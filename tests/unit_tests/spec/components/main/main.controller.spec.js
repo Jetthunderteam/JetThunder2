@@ -3,7 +3,7 @@
  **************************/
 'use strict';
 describe('JetThunder2 Main: Controller', function() {
-    var q, rootScope, scope, controller, httpBackend, authFactory, mainFactory, mockMainData, mockUrl;
+    var q, rootScope, scope, controller, httpBackend, mainFactory, utilsFactory, mockMainData, mockUrl;
     mockUrl = 'app/data/blog.json';
 
     beforeEach(function () {
@@ -12,14 +12,14 @@ describe('JetThunder2 Main: Controller', function() {
         module(function($urlRouterProvider) {
             $urlRouterProvider.deferIntercept();
         });
-        inject(function ($q, $rootScope, $controller, $httpBackend, _authFactory_, _mainFactory_, _mockMainData_) {
+        inject(function ($q, $rootScope, $controller, $httpBackend, _mainFactory_, _utilsFactory_, _mockMainData_) {
             q = $q;
             rootScope = $rootScope;
             scope = $rootScope.$new();
             controller = $controller('MainCtrl', {$scope: scope});
             httpBackend = $httpBackend;
-            authFactory = _authFactory_;
             mainFactory = _mainFactory_;
+            utilsFactory = _utilsFactory_;
             mockMainData = _mockMainData_;
         });
         spyOn(rootScope, '$broadcast').and.callThrough();
@@ -40,6 +40,9 @@ describe('JetThunder2 Main: Controller', function() {
             controller.$onInit();
             scope.$apply();
             expect(controller.blogItems).toEqual(mockMainData.entries);
+        });
+        it('Should beautify a given URL when calling beautifyUrl()', function() {
+            expect(controller.beautifyUrl('Mazda RX8')).toEqual('Mazda-RX8');
         });
     });
 });

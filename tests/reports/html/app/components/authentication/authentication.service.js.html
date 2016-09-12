@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app\components\authentication\authentication.service.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">app/components/authentication/</a> authentication.service.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.52% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.52% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/******************************
+ * Authentication Service
+ *******************************/
+(function () {
+    'use strict';
+    angular
+        .module('JetThunder2.authentication')
+        /******************************
+         * Authentication Service
+         *******************************/
+        .service('authService', authService);
+&nbsp;
+    /******************************
+     * Service Function
+     *******************************/
+    authService.$inject = ['firebaseURL', '$firebaseArray', '$firebaseObject'];
+<span class="fstat-no" title="function not covered" >    function authService(firebaseURL, $firebaseArray, $firebaseObject) {</span>
+        /**  **/
+<span class="cstat-no" title="statement not covered" >        var ref = new Firebase(firebaseURL);</span>
+<span class="cstat-no" title="statement not covered" >        this.cachedUser = ref.getAuth();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var formatEmailForFirebase = <span class="fstat-no" title="function not covered" >function (email) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var key = email.replace('@', '^');</span>
+<span class="cstat-no" title="statement not covered" >            if (key.indexOf('.') !== -1) {</span>
+<span class="cstat-no" title="statement not covered" >                return key.split('.').join('*');</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return key;</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var addNewUserToFB = <span class="fstat-no" title="function not covered" >function (newUser) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var key = formatEmailForFirebase(newUser.email);</span>
+<span class="cstat-no" title="statement not covered" >            ref.child('user').child(key).set(newUser);</span>
+        };
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.isLoggedIn = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            return !!ref.getAuth();</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.getUser = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            return this.cachedUser || ref.getAuth();</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.createUser = <span class="fstat-no" title="function not covered" >function (user, cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >            ref.createUser(user, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                    switch (err.code) {</span>
+                        case "EMAIL_TAKEN":
+<span class="cstat-no" title="statement not covered" >                            console.log("The new user account cannot be created because the email is already in use.");</span>
+<span class="cstat-no" title="statement not covered" >                            break;</span>
+                        case "INVALID_EMAIL":
+<span class="cstat-no" title="statement not covered" >                            console.log("The specified email is not a valid email.");</span>
+<span class="cstat-no" title="statement not covered" >                            break;</span>
+                        default:
+<span class="cstat-no" title="statement not covered" >                            console.log("Error creating user:", err);</span>
+                    }
+                } else {
+<span class="cstat-no" title="statement not covered" >                    this.loginWithPW(user, <span class="fstat-no" title="function not covered" >function (authData) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        addNewUserToFB({</span>
+                            email: user.email,
+                            uid: authData.uid,
+                            token: authData.token
+                        });
+                    }, cb);
+                }
+            }.bind(this));
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.loginWithPW = <span class="fstat-no" title="function not covered" >function (userObj, cb, cbOnRegister) {</span></span>
+<span class="cstat-no" title="statement not covered" >            ref.authWithPassword(userObj, <span class="fstat-no" title="function not covered" >function (err, authData) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.log('Error on login:', err.message);</span>
+<span class="cstat-no" title="statement not covered" >                    cbOnRegister &amp;&amp; cbOnRegister(false);</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    authData.email = userObj.email;</span>
+<span class="cstat-no" title="statement not covered" >                    this.cachedUser = authData;</span>
+<span class="cstat-no" title="statement not covered" >                    cb(authData);</span>
+<span class="cstat-no" title="statement not covered" >                    cbOnRegister &amp;&amp; cbOnRegister(true);</span>
+                }
+            }.bind(this));
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.logout = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            ref.unauth();</span>
+<span class="cstat-no" title="statement not covered" >            this.cachedUser = null;</span>
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+        };
+    }
+})();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Sep 12 2016 21:14:15 GMT+0100 (GMT Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

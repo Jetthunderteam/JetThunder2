@@ -13,6 +13,9 @@ describe('JetThunder2 Utils: Factory', function () {
     });
 
     describe('Utils Factory Tests', function () {
+        it('Should beautify a given URL on calling beautifyUrl()', function() {
+            expect(utilsFactory.beautifyUrl('../Mazda RX8/')).toEqual('../Mazda-RX8/');
+        });
         it('Should get the current date', function () {
             jasmine.clock().mockDate(baseDate);
             expect(utilsFactory.getMoment()).toBeDefined();
