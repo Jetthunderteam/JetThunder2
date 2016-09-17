@@ -4,6 +4,7 @@ Imports
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,100,700,900);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 /*************************
 Master
 **************************/
@@ -93,6 +94,9 @@ h6 {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 2; }
+
+p {
+  font-family: "Roboto", sans-serif; }
 
 /*************************
 Links
@@ -233,27 +237,27 @@ Components
 /*************************
 Main
 **************************/
-.mainView .container-fluid, .container-fluid .col-sm-3 {
+.homeView .container-fluid, .container-fluid .col-sm-3 {
   overflow: hidden;
   padding: 0; }
 
-.mainItem {
+.homeItem {
   position: relative; }
 
-.mainItem:hover .mainItemOverlay {
+.homeItem:hover .homeItemOverlay {
   opacity: .8;
   bottom: 0;
   height: 100%; }
 
-.mainItem:hover .mainItemOverlay .mainItemOverlayInfo {
+.homeItem:hover .homeItemOverlay .homeItemOverlayInfo {
   opacity: 1;
   margin-bottom: 0;
   margin-top: 0; }
 
-.mainItemImage img {
+.homeItemImage img {
   width: 100%; }
 
-.mainItemOverlay {
+.homeItemOverlay {
   background-color: #1776a0;
   color: #fff;
   left: 0;
@@ -265,22 +269,22 @@ Main
   opacity: 0;
   transition: all .5s ease-in-out; }
 
-.mainItemOverlayContent {
+.homeItemOverlayContent {
   display: table;
   height: 100%;
   width: 100%; }
 
-.mainItemOverlayText {
+.homeItemOverlayText {
   display: table-cell;
   vertical-align: middle; }
 
-.mainItemOverlayInfo {
+.homeItemOverlayInfo {
   opacity: 0;
   margin-bottom: 75px;
   margin-top: -75px;
   transition: all 1s ease-in-out; }
 
-.mainItemOverlayInfo h3 {
+.homeItemOverlayInfo h3 {
   margin-top: 0;
   color: #fff; }
 
@@ -364,6 +368,9 @@ Blog
 .blogItemTag {
   text-transform: uppercase;
   padding: 0.5rem; }
+
+.blogItemImage {
+  width: 100%; }
 
 .blogItemMeta {
   position: relative;

@@ -3,7 +3,7 @@
     <div class="md-toolbar-tools">
         <md-button class="md-icon-button" ng-click="NavbarCtrl.openNavigation('left')" aria-label="Open Menu">
             <md-icon class="navbarIcon">menu</md-icon>
-            <md-tooltip md-delay="500">
+            <md-tooltip md-delay="250">
                 Menu
             </md-tooltip>
         </md-button>
@@ -25,32 +25,32 @@
         </md-button>
         <md-button class="md-icon-button" aria-label="Wifi">
             <md-icon class="navbarIcon" ng-class="{navbarWifiOnIcon: $root.connection == true, navbarWifiOffIcon: $root.connection == false}">wifi</md-icon>
-            <md-tooltip md-delay="500">
+            <md-tooltip md-delay="250">
                 Connection Status
             </md-tooltip>
         </md-button>
         <md-menu>
             <md-button class="md-icon-button" ng-click="NavbarCtrl.openMenu($mdOpenMenu, $event)" aria-label="Account">
                 <md-icon class="navbarIcon">fingerprint</md-icon>
-                <md-tooltip md-delay="500">
+                <md-tooltip md-delay="250">
                     Identity
                 </md-tooltip>
             </md-button>
             <md-menu-content width="4">
                 <md-menu-item>
-                    <md-button>
+                    <md-button ui-sref="profile" role="link">
                         <md-icon class="navbarIcon">account_circle</md-icon>
                         My Profile
                     </md-button>
                 </md-menu-item>
                 <md-menu-item>
-                    <md-button>
+                    <md-button ng-click="NavbarCtrl.openSignIn(event)">
                         <md-icon class="navbarIcon">verified_user</md-icon>
                         Sign In
                     </md-button>
                 </md-menu-item>
                 <md-menu-item>
-                    <md-button>
+                    <md-button ui-sref="logout" role="link">
                         <md-icon class="navbarIcon">power_settings_new</md-icon>
                         Sign Out!
                     </md-button>

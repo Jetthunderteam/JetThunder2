@@ -14,17 +14,19 @@
     /*************************
      Controller Function
      **************************/
-    NavbarCtrl.$inject = ['$timeout', '$mdSidenav', 'utilsFactory'];
-    function NavbarCtrl($timeout, $mdSidenav, utilsFactory) {
+    NavbarCtrl.$inject = ['$timeout', '$mdSidenav', '$mdDialog', 'authFactory', 'utilsFactory'];
+    function NavbarCtrl($timeout, $mdSidenav, $mdDialog, authFactory, utilsFactory) {
         var vm = this, tickInterval = 1000;
 
-        /** Variables */
+        /** View Bindings */
         vm.clock = "Initialising";
 
-        /** Function Initializers */
+        /** Bindings */
         vm.$onInit = activate;
         vm.openMenu = openMenu;
         vm.openNavigation = openNavigation;
+        vm.openSignIn = openSignIn;
+        vm.openSignUp = openSignUp;
 
         /** Activate */
         function activate() {
@@ -47,6 +49,20 @@
          */
         function openNavigation(direction) {
             $mdSidenav(direction).toggle();
+        }
+
+        function openSignIn(event) {
+            $mdDialog.show({
+                controller: 'AuthCtrl',
+                controllerAs: 'AuthCtrl',
+                templateUrl: 'app/components/authentication/authentication.login.html',
+                targetEvent: event,
+                clickOutsideToClose:true
+            })
+        }
+
+        function openSignUp() {
+
         }
 
         /** Creates the tick for the navbar clock */

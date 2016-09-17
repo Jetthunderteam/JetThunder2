@@ -4,6 +4,7 @@ Imports
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,100,700,900);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 /*************************
 Master
 **************************/
@@ -13,7 +14,7 @@ Master
 /*************************
 Components
 **************************/
-@import "components/main.scss";
+@import "components/home.scss";
 @import "components/jetThunder.scss";
 @import "components/blog.scss";
 @import "components/navbar.scss";

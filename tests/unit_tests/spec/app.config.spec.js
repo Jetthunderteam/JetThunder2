@@ -16,7 +16,7 @@ describe('JetThunder2: Config', function() {
 
     describe('JetThunder Config Tests', function () {
         it('Should respond to the main URL', function () {
-            mockState = 'main';
+            mockState = 'home';
             expect(state.href(mockState)).toEqual('#/');
         });
         it('Should respond to the blog URL', function () {

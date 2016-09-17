@@ -3,7 +3,7 @@
  **************************/
 'use strict';
 describe('JetThunder2 Blog: Controller', function() {
-    var q, rootScope, scope, controller, httpBackend, state, mainFactory, mockMainData, mockUrl;
+    var q, rootScope, scope, controller, httpBackend, state, homeFactory, mockMainData, mockUrl;
     mockUrl = 'app/data/blog.json';
 
     beforeEach(function () {
@@ -12,19 +12,19 @@ describe('JetThunder2 Blog: Controller', function() {
         module(function($urlRouterProvider) {
             $urlRouterProvider.deferIntercept();
         });
-        inject(function ($q, $rootScope, $controller, $httpBackend, $state, _mainFactory_, _mockMainData_) {
+        inject(function ($q, $rootScope, $controller, $httpBackend, $state, _homeFactory_, _mockMainData_) {
             q = $q;
             rootScope = $rootScope;
             scope = $rootScope.$new();
             controller = $controller('BlogCtrl', {$scope: scope});
             httpBackend = $httpBackend;
             state = $state;
-            mainFactory = _mainFactory_;
+            homeFactory = _homeFactory_;
             mockMainData = _mockMainData_;
         });
         spyOn(rootScope, '$broadcast').and.callThrough();
         spyOn(state, 'go');
-        spyOn(mainFactory, 'getBlogItems').and.callFake(function () {
+        spyOn(homeFactory, 'getBlogItems').and.callFake(function () {
             var deferred = q.defer();
             deferred.resolve(mockMainData);
             return deferred.promise;

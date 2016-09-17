@@ -18,10 +18,10 @@
     function NavigationCtrl($mdSidenav) {
         var vm = this;
 
-        /** Variables */
+        /** View Bindings */
         vm.openNavigation = openNavigation;
 
-        /** Function Initializers */
+        /** Bindings */
 
         /**
          * Opens the side navigation panel from the

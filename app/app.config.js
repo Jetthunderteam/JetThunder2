@@ -13,11 +13,11 @@
         $urlRouterProvider.when('', '/');
         $urlRouterProvider.otherwise('/');
         $stateProvider
-            .state('main', {
+            .state('home', {
                 url: '/',
-                templateUrl: 'app/components/main/main.html',
-                controller: "MainCtrl",
-                controllerAs: "MainCtrl"
+                templateUrl: 'app/components/home/home.html',
+                controller: "HomeCtrl",
+                controllerAs: "HomeCtrl"
             })
             .state('jetThunder', {
                 url: '/jetThunder',
@@ -37,6 +37,30 @@
                     }
                 },
                 reloadOnSearch: false
+            })
+            .state('profile', {
+                url: '/profile',
+                templateUrl: 'app/components/profile/profile.html',
+                controller: 'ProfileCtrl',
+                controllerAs: 'ProfileCtrl'
+            })
+            .state('register', {
+                url: '/register',
+                templateUrl: 'app/components/authentication/authentication.signup.html',
+                controller: 'AuthCtrl',
+                controllerAs: 'AuthCtrl'
+            })
+            .state('login', {
+               url: '/login',
+                templateUrl: 'app/components/authentication/authentication.login.html',
+                controller: 'AuthCtrl',
+                controllerAs: 'AuthCtrl'
+            })
+            .state('logout', {
+                url: '/logout',
+                templateUrl: 'app/components/authentication/authentication.logout.html',
+                controller: 'AuthCtrl',
+                controllerAs: 'AuthCtrl'
             });
         $mdThemingProvider.theme('jetThunder2');
         $mdThemingProvider.setDefaultTheme('jetThunder2');

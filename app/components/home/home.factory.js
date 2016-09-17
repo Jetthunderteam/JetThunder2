@@ -4,17 +4,17 @@
 (function () {
     'use strict';
     angular
-        .module('JetThunder2.main')
+        .module('JetThunder2.home')
         /******************************
          * Main Factory
          *******************************/
-        .factory('mainFactory', mainFactory);
+        .factory('homeFactory', homeFactory);
 
     /******************************
      * Service Function
      *******************************/
-    mainFactory.$inject = ['$http', '$log', 'urlsFactory'];
-    function mainFactory($http, $log, urlsFactory) {
+    homeFactory.$inject = ['$http', '$log', 'urlsFactory'];
+    function homeFactory($http, $log, urlsFactory) {
         return {
             getBlogItems: getBlogItems
         };

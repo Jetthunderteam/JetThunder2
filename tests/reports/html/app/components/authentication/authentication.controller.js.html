@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>21/28</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">28.57% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>2/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>21/28</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -63,7 +63,56 @@
 18
 19
 20
-21</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -82,6 +131,55 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*************************
  Authentication Module
@@ -99,9 +197,58 @@
     /*************************
      Controller Function
      **************************/
-    AuthCtrl.$inject = [];
-    function AuthCtrl() {
+    AuthCtrl.$inject = ['$mdDialog', 'authFactory'];
+    function AuthCtrl($mdDialog, authFactory) {
         var vm = this;
+&nbsp;
+        /** View Bindings */
+        vm.displayImage = '';
+        vm.email = '';
+        vm.firstName = '';
+        vm.lastName = '';
+        vm.password = '';
+        vm.uid = '';
+&nbsp;
+        /** Bindings */
+        vm.closeAuthDialog = closeAuthDialog;
+        vm.createUser = createUser;
+        vm.getUser = getUser;
+        vm.signIn = signIn;
+        vm.signOut = signOut;
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function closeAuthDialog() {</span>
+<span class="cstat-no" title="statement not covered" >            $mdDialog.cancel();</span>
+        }
+&nbsp;
+        /**
+         * Creates a new user through Firebase
+         * @param {string} email - The users emails
+         * @param {string} password - The users password
+         */
+<span class="fstat-no" title="function not covered" >        function createUser(email, password) {</span>
+<span class="cstat-no" title="statement not covered" >            authFactory.createUser(email, password);</span>
+<span class="cstat-no" title="statement not covered" >            getUser();</span>
+        }
+&nbsp;
+        /** Gets the current user details */
+<span class="fstat-no" title="function not covered" >        function getUser() {</span>
+<span class="cstat-no" title="statement not covered" >            authFactory.getUser();</span>
+        }
+&nbsp;
+        /**
+         * Signs in the user through Firebase
+         * @param {string} email - The users emails
+         * @param {string} password - The users password
+         */
+<span class="fstat-no" title="function not covered" >        function signIn(email, password) {</span>
+<span class="cstat-no" title="statement not covered" >            authFactory.signIn(email, password);</span>
+<span class="cstat-no" title="statement not covered" >            getUser();</span>
+        }
+&nbsp;
+        /** Signs out the current user */
+<span class="fstat-no" title="function not covered" >        function signOut() {</span>
+<span class="cstat-no" title="statement not covered" >            authFactory.signOut();</span>
+        }
     }
 })();</pre></td></tr>
 </table></pre>
@@ -109,7 +256,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Sep 12 2016 21:14:15 GMT+0100 (GMT Daylight Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Sep 17 2016 18:31:29 GMT+0100 (GMT Daylight Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

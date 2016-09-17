@@ -14,19 +14,19 @@
     /*************************
      Controller Function
      **************************/
-    BlogCtrl.$inject = ['$scope', '$state', '$log', 'mainFactory'];
-    function BlogCtrl($scope, $state, $log, mainFactory) {
+    BlogCtrl.$inject = ['$scope', '$state', '$log', 'homeFactory'];
+    function BlogCtrl($scope, $state, $log, homeFactory) {
         var vm = this;
 
         /** Activate */
         vm.$onInit = activate;
 
-        /** Variables */
+        /** View Bindings */
         vm.blogItems = [];
         vm.search = $state.params.post;
         vm.searchText = searchText;
 
-        /** Function Initializers */
+        /** Bindings */
         vm.searchText = searchText;
 
         $scope.$on('$locationChangeSuccess', function() {
@@ -48,7 +48,7 @@
          * @returns {*}
          */
         function getBlogItems() {
-            return mainFactory.getBlogItems()
+            return homeFactory.getBlogItems()
                 .then(function(data) {
                     vm.blogItems = data.entries;
                     return vm.blogItems;

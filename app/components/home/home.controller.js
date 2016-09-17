@@ -5,26 +5,26 @@
     'use strict';
 
     angular
-        .module('JetThunder2.main')
+        .module('JetThunder2.home')
         /*************************
          Main Controller
          **************************/
-        .controller('MainCtrl', MainCtrl);
+        .controller('HomeCtrl', HomeCtrl);
 
     /*************************
      Controller Function
      **************************/
-    MainCtrl.$inject = ['$log', 'mainFactory', 'utilsFactory'];
-    function MainCtrl($log, mainFactory, utilsFactory) {
+    HomeCtrl.$inject = ['$log', 'homeFactory', 'utilsFactory'];
+    function HomeCtrl($log, homeFactory, utilsFactory) {
         var vm = this;
 
         /** Activate */
         vm.$onInit = activate;
 
-        /** Variables */
+        /** View Bindings */
         vm.blogItems = {};
 
-        /** Function Initializers */
+        /** Bindings */
         vm.beautifyUrl = beautifyUrl;
 
         /**
@@ -51,7 +51,7 @@
          * @returns {*}
          */
         function getBlogItems() {
-            return mainFactory.getBlogItems()
+            return homeFactory.getBlogItems()
                 .then(function(data) {
                     vm.blogItems = data.entries;
                     return vm.blogItems;

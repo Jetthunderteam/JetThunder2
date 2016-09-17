@@ -18,8 +18,8 @@
     function JetThunderCtrl() {
         var vm = this;
 
-        /** Variables */
+        /** View Bindings */
 
-        /** Function Initializers */
+        /** Bindings */
     }
 })();

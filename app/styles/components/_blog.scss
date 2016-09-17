@@ -8,7 +8,7 @@ Blog
 .blogItemTitle{padding-bottom: 40px;font-weight: 100;font-size: 5rem}
 .blogItemTags{}
 .blogItemTag{text-transform: uppercase;padding: 0.5rem}
-.blogItemImage{}
+.blogItemImage{width: 100%;}
 .blogItemMeta{position: relative;z-index: 100;}
 .blogItemAuthor{display: block; width: 70px; height: 70px; border: 5px solid #fff; border-radius: 50%; overflow: hidden; margin: -35px auto 0;background: $primary-color}
 .blogItemAuthorImage{width: 100%}

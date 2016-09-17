@@ -18,9 +18,9 @@
     function FooterCtrl(utilsFactory) {
         var vm = this;
 
-        /** Variables */
+        /** View Bindings */
         vm.copyrightDate = utilsFactory.getYear();
-        
-        /** Function Initializers */
+
+        /** Bindings */
     }
 })();

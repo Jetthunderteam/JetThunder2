@@ -1,9 +1,9 @@
 /*************************
- Main Controller  Tests
+ Home Controller  Tests
  **************************/
 'use strict';
-describe('JetThunder2 Main: Controller', function() {
-    var q, rootScope, scope, controller, httpBackend, mainFactory, utilsFactory, mockMainData, mockUrl;
+describe('JetThunder2 Home: Controller', function() {
+    var q, rootScope, scope, controller, httpBackend, homeFactory, utilsFactory, mockMainData, mockUrl;
     mockUrl = 'app/data/blog.json';
 
     beforeEach(function () {
@@ -12,18 +12,18 @@ describe('JetThunder2 Main: Controller', function() {
         module(function($urlRouterProvider) {
             $urlRouterProvider.deferIntercept();
         });
-        inject(function ($q, $rootScope, $controller, $httpBackend, _mainFactory_, _utilsFactory_, _mockMainData_) {
+        inject(function ($q, $rootScope, $controller, $httpBackend, _homeFactory_, _utilsFactory_, _mockMainData_) {
             q = $q;
             rootScope = $rootScope;
             scope = $rootScope.$new();
-            controller = $controller('MainCtrl', {$scope: scope});
+            controller = $controller('HomeCtrl', {$scope: scope});
             httpBackend = $httpBackend;
-            mainFactory = _mainFactory_;
+            homeFactory = _homeFactory_;
             utilsFactory = _utilsFactory_;
             mockMainData = _mockMainData_;
         });
         spyOn(rootScope, '$broadcast').and.callThrough();
-        spyOn(mainFactory, 'getBlogItems').and.callFake(function () {
+        spyOn(homeFactory, 'getBlogItems').and.callFake(function () {
             var deferred = q.defer();
             deferred.resolve(mockMainData);
             return deferred.promise;

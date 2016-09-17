@@ -1,0 +1,27 @@
+/*************************
+Main
+**************************/
+.homeView .container-fluid, .container-fluid .col-sm-3{overflow:hidden;padding:$no-padding}
+.homeItem{position:relative}
+.homeItem:hover .homeItemOverlay{opacity:.8;bottom:0;height:100%}
+.homeItem:hover .homeItemOverlay .homeItemOverlayInfo{opacity:1;margin-bottom:0;margin-top:0}
+.homeItemImage img{width:100%}
+.homeItemOverlay{background-color:$highlight-color;color:#fff;left:0;right:0;bottom:-100%;height:0;position:absolute;text-align:center;opacity:0;-webkit-transition:all .5s ease-in-out;transition:all .5s ease-in-out}
+.homeItemOverlayContent{display:table;height:100%;width:100%}
+.homeItemOverlayText{display:table-cell;vertical-align:middle}
+.homeItemOverlayInfo{opacity:0;margin-bottom:75px;margin-top:-75px;-webkit-transition:all 1s ease-in-out;transition:all 1s ease-in-out}
+.homeItemOverlayInfo h3{margin-top:0;color:#fff}
+/*************************
+Media Queries
+**************************/
+// Extra small devices (portrait phones, less than 34em)
+@media (max-width: 33.9em) {}
+
+// Small devices (landscape phones, less than 48em)
+@media (max-width: 47.9em) {}
+
+// Medium devices (tablets, less than 62em)
+@media (max-width: 61.9em) {}
+
+// Large devices (desktops, less than 75em)
+@media (max-width: 74.9em) {}

@@ -1,16 +1,16 @@
 <!-- Main View -->
-<section class="mainView">
+<section class="homeView">
     <div class="container-fluid text-xs-center">
         <div class="row-fluid">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 padding-none" ng-repeat="post in MainCtrl.blogItems">
-                <div class="mainItem" ui-sref="blog({post: post.postTitle})">
-                    <div class="mainItemImage">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 padding-none" ng-repeat="post in HomeCtrl.blogItems">
+                <div class="homeItem" ui-sref="blog({post: post.postTitle})">
+                    <div class="homeItemImage">
                         <img class="img-responsive" ng-src="app/images/blog/blog-{{post.photoURL}}" alt="">
                     </div>
-                    <div class="mainItemOverlay">
-                        <div class="mainItemOverlayContent">
-                            <div class="mainItemOverlayText">
-                                <div class="mainItemOverlayInfo">
+                    <div class="homeItemOverlay">
+                        <div class="homeItemOverlayContent">
+                            <div class="homeItemOverlayText">
+                                <div class="homeItemOverlayInfo">
                                     <h3>{{post.postTitle}}</h3>
                                     <p>{{post.postDate}}</p>
                                 </div>

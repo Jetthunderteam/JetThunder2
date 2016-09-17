@@ -1,0 +1,19 @@
+<!-- SignUp -->
+<section class="section-padding text-xs-center">
+    <h1 class="text-center"> Sign Up </h1>
+    <div class="col-sm-6 col-sm-offset-3">
+        <form ng-submit="AuthCtrl.createUser(AuthCtrl.email, AuthCtrl.password)">
+            <div class="form-group">
+                <label> Email </label>
+                <input class="form-control" ng-model="AuthCtrl.email" placeholder="Email"/>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" ng-model="AuthCtrl.password" type="password" placeholder="Password" />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button class="btn btn-primary" ng-click="AuthCtrl.getUser()">GetUser</button>
+        </form>
+    </div>
+</section>
+<!-- /SingUp -->
