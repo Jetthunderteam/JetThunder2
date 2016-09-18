@@ -13,13 +13,13 @@
     /******************************
      * Service Function
      *******************************/
-    authFactory.$inject = ['$log'];
-    function authFactory($log) {
+    authFactory.$inject = ['$state', '$log'];
+    function authFactory($state, $log) {
         var cachedUser, errorCode, errorMessage;
         return {
             createUser: createUser,
+            getCachedUser: getCachedUser,
             getUser: getUser,
-            navigateUser: navigateUser,
             signIn: signIn,
             signOut: signOut
         };
@@ -39,6 +39,10 @@
                 });
         }
 
+        function getCachedUser() {
+            return cachedUser;
+        }
+
         /** Gets the currently authenticated user details */
         function getUser() {
             firebase.auth().onAuthStateChanged(function (user) {
@@ -51,14 +55,9 @@
                     };
                     return cachedUser;
                 } else {
-                    $log.debug('No user logged in');
+                    $log.warn('No user logged in');
                 }
             })
-        }
-
-        /** Navigates to a desired view */
-        function navigateUser(view) {
-            $state.go(view);
         }
 
         /**
@@ -69,11 +68,28 @@
         function signIn(email, password) {
             firebase.auth()
                 .signInWithEmailAndPassword(email, password)
-                .catch(function (error) {
-                    errorCode = error.code;
-                    errorMessage = error.message;
-                    $log.debug('Unable to login user ' + errorCode + errorMessage);
-                });
+                .then(_signInSuccess)
+                .catch(_signInFailure);
+
+            function _signInSuccess(user) {
+                $log.info('Successfully signed in!');
+                $state.go('profile');
+                if (angular.isObject(user) && user != null) {
+                    cachedUser = {
+                        name: user.displayName,
+                        email: user.email,
+                        photoUrl: user.photoURL,
+                        uid: user.uid
+                    };
+                }
+                return cachedUser;
+            }
+
+            function _signInFailure(error) {
+                errorCode = error.code;
+                errorMessage = error.message;
+                $log.warn('Unable to login user ' + errorCode + errorMessage);
+            }
         }
 
         /** Signs out the currently authenticated user */
@@ -81,6 +97,7 @@
             firebase.auth().signOut().then(function () {
                 $log.info('Successfully signed out!');
                 cachedUser = null;
+                $state.go('logout');
             }, function (error) {
                 $log.debug('Error during sign-out ' + error);
                 return error;

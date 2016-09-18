@@ -45,7 +45,7 @@ Section
 Material Components
 **************************/
 md-tooltip{z-index: $tooltip-zindex}
-md-toolbar.md-jetThunder2-theme {background-color: $white !important; z-index: $navbar-zindex}
+md-toolbar.md-jetThunder2-theme {background-color: $primary-background-dark !important; z-index: $navbar-zindex}
 md-sidenav.md-jetThunder2-theme {z-index: $sidenav-zindex}
 md-open-menu.md-jetThunder2-theme{z-index: $menu-zindex}
 md-list.md-jetThunder2-theme{padding: 0 !important}

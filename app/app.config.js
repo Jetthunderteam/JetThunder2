@@ -44,18 +44,6 @@
                 controller: 'ProfileCtrl',
                 controllerAs: 'ProfileCtrl'
             })
-            .state('register', {
-                url: '/register',
-                templateUrl: 'app/components/authentication/authentication.signup.html',
-                controller: 'AuthCtrl',
-                controllerAs: 'AuthCtrl'
-            })
-            .state('login', {
-               url: '/login',
-                templateUrl: 'app/components/authentication/authentication.login.html',
-                controller: 'AuthCtrl',
-                controllerAs: 'AuthCtrl'
-            })
             .state('logout', {
                 url: '/logout',
                 templateUrl: 'app/components/authentication/authentication.logout.html',

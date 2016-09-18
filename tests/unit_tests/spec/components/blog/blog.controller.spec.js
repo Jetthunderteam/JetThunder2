@@ -3,16 +3,16 @@
  **************************/
 'use strict';
 describe('JetThunder2 Blog: Controller', function() {
-    var q, rootScope, scope, controller, httpBackend, state, homeFactory, mockMainData, mockUrl;
+    var q, rootScope, scope, controller, httpBackend, state, homeFactory, mockHomeData, mockUrl;
     mockUrl = 'app/data/blog.json';
 
     beforeEach(function () {
         module('JetThunder2');
-        module('mockMainData.json');
+        module('mockHomeData.json');
         module(function($urlRouterProvider) {
             $urlRouterProvider.deferIntercept();
         });
-        inject(function ($q, $rootScope, $controller, $httpBackend, $state, _homeFactory_, _mockMainData_) {
+        inject(function ($q, $rootScope, $controller, $httpBackend, $state, _homeFactory_, _mockHomeData_) {
             q = $q;
             rootScope = $rootScope;
             scope = $rootScope.$new();
@@ -20,16 +20,16 @@ describe('JetThunder2 Blog: Controller', function() {
             httpBackend = $httpBackend;
             state = $state;
             homeFactory = _homeFactory_;
-            mockMainData = _mockMainData_;
+            mockHomeData = _mockHomeData_;
         });
         spyOn(rootScope, '$broadcast').and.callThrough();
         spyOn(state, 'go');
         spyOn(homeFactory, 'getBlogItems').and.callFake(function () {
             var deferred = q.defer();
-            deferred.resolve(mockMainData);
+            deferred.resolve(mockHomeData);
             return deferred.promise;
         });
-        httpBackend.when('GET', mockUrl).respond(mockMainData);
+        httpBackend.when('GET', mockUrl).respond(mockHomeData);
     });
 
     describe('Blog Controller Tests', function () {
@@ -40,7 +40,7 @@ describe('JetThunder2 Blog: Controller', function() {
             scope.$apply();
             controller.$onInit();
             scope.$apply();
-            expect(controller.blogItems).toEqual(mockMainData.entries);
+            expect(controller.blogItems).toEqual(mockHomeData.entries);
         });
         it('Should on change of URL, update the search', function() {
             rootScope.$broadcast('$locationChangeSuccess');

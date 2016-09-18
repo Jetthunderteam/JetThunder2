@@ -10,6 +10,23 @@
             display: none !important;
         }
     </style>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="app/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="app/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="app/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="app/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="app/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="app/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="app/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="app/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="app/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="app/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="app/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="app/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="app/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="app/favicon/manifest.json">
+    <link rel="mask-icon" href="app/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <!-- /Favicons -->
     <link rel="stylesheet" href="app/bower_components/please-wait/build/please-wait.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="app/bower_components/angular-material/angular-material.min.css" type="text/css"/>
@@ -17,28 +34,13 @@
     <link rel="stylesheet" href="app/bower_components/animate.css/animate.min.css" type="text/css"/>
     <link rel="stylesheet" href="app/bower_components/font-awesome/css/font-awesome.min.css" type="text/css"/>
     <link rel="stylesheet" href="app/styles/app.min.css" type="text/css"/>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-76777772-1', 'auto');
-        ga('send', 'pageview');
-    </script>
 </head>
 <body>
 <!-- Components -->
 <navbar-directive></navbar-directive>
 <navigation-directive></navigation-directive>
 <footer-directive></footer-directive>
+<analytics-directive></analytics-directive>
 <!-- /Components -->
 
 <md-content class="view" ui-view></md-content>
@@ -120,6 +122,7 @@
 <!-- Angulartics -->
 <script src="app/bower_components/angulartics/dist/angulartics.min.js" type="text/javascript"></script>
 <script src="app/bower_components/angulartics-google-analytics/dist/angulartics-ga.min.js" type="text/javascript"></script>
+<script src="app/components/analytics/analytics.directive.js" type="text/javascript"></script>
 <!-- /Angulartics -->
 
 <script>

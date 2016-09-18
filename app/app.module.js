@@ -41,4 +41,7 @@
     //Utils
     angular.module('JetThunder2.utils', []);
     angular.module('JetThunder2.urls', []);
+    
+    //Analytics
+    angular.module('JetThunder2.analytics', []);
 })();

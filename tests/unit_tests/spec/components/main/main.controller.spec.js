@@ -3,16 +3,16 @@
  **************************/
 'use strict';
 describe('JetThunder2 Home: Controller', function() {
-    var q, rootScope, scope, controller, httpBackend, homeFactory, utilsFactory, mockMainData, mockUrl;
+    var q, rootScope, scope, controller, httpBackend, homeFactory, utilsFactory, mockHomeData, mockUrl;
     mockUrl = 'app/data/blog.json';
 
     beforeEach(function () {
         module('JetThunder2');
-        module('mockMainData.json');
+        module('mockHomeData.json');
         module(function($urlRouterProvider) {
             $urlRouterProvider.deferIntercept();
         });
-        inject(function ($q, $rootScope, $controller, $httpBackend, _homeFactory_, _utilsFactory_, _mockMainData_) {
+        inject(function ($q, $rootScope, $controller, $httpBackend, _homeFactory_, _utilsFactory_, _mockHomeData_) {
             q = $q;
             rootScope = $rootScope;
             scope = $rootScope.$new();
@@ -20,15 +20,15 @@ describe('JetThunder2 Home: Controller', function() {
             httpBackend = $httpBackend;
             homeFactory = _homeFactory_;
             utilsFactory = _utilsFactory_;
-            mockMainData = _mockMainData_;
+            mockHomeData = _mockHomeData_;
         });
         spyOn(rootScope, '$broadcast').and.callThrough();
         spyOn(homeFactory, 'getBlogItems').and.callFake(function () {
             var deferred = q.defer();
-            deferred.resolve(mockMainData);
+            deferred.resolve(mockHomeData);
             return deferred.promise;
         });
-        httpBackend.when('GET', mockUrl).respond(mockMainData);
+        httpBackend.when('GET', mockUrl).respond(mockHomeData);
     });
 
     describe('Main Controller Tests', function () {
@@ -39,7 +39,7 @@ describe('JetThunder2 Home: Controller', function() {
             scope.$apply();
             controller.$onInit();
             scope.$apply();
-            expect(controller.blogItems).toEqual(mockMainData.entries);
+            expect(controller.blogItems).toEqual(mockHomeData.entries);
         });
         it('Should beautify a given URL when calling beautifyUrl()', function() {
             expect(controller.beautifyUrl('Mazda RX8')).toEqual('Mazda-RX8');

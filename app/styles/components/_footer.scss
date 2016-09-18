@@ -2,14 +2,6 @@
 Footer
 **************************/
 .footer{ position: fixed;  bottom: 0;  left: 0;  height: 48px;  width: 100%;  background-color: $white;  color: $primary-color; border-top: $border-light; padding-left: 20px; padding-right: 20px; z-index: $footer-zindex; @include flexRowBetweenCenter}
-.footerTitle {}
-.footerCopyright {}
-.footerSocial{font-size: 2rem; padding:0.2em 0.3em 0.2em 0.3em}
-.footerTwitter{}
-.footerFacebook{}
-.footerGoogle-plus{}
-.footerLinkedin{}
-.footerPinterest{}
 /*************************
 Media Queries
 **************************/
@@ -18,7 +10,7 @@ Media Queries
 
 // Small devices (landscape phones, less than 48em)
 @media (max-width: 47.9em) {
-  .footerSocial {display: none}
+  .footerLogos {display: none}
 }
 
 // Medium devices (tablets, less than 62em)

@@ -44,7 +44,6 @@
          */
         function createUser(email, password) {
             authFactory.createUser(email, password);
-            getUser();
         }
 
         /** Gets the current user details */
@@ -59,7 +58,6 @@
          */
         function signIn(email, password) {
             authFactory.signIn(email, password);
-            getUser();
         }
 
         /** Signs out the current user */

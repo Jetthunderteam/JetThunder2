@@ -174,7 +174,7 @@ md-tooltip {
   z-index: 1000; }
 
 md-toolbar.md-jetThunder2-theme {
-  background-color: #fff !important;
+  background-color: #343434 !important;
   z-index: 400; }
 
 md-sidenav.md-jetThunder2-theme {
@@ -474,13 +474,9 @@ Footer
   -ms-flex-align: center;
       align-items: center; }
 
-.footerSocial {
-  font-size: 2rem;
-  padding: 0.2em 0.3em 0.2em 0.3em; }
-
 /*************************
 Media Queries
 **************************/
 @media (max-width: 47.9em) {
-  .footerSocial {
+  .footerLogos {
     display: none; } }

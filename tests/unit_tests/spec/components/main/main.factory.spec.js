@@ -3,19 +3,19 @@
  **************************/
 'use strict';
 describe('JetThunder2 Main: Factory', function () {
-    var rootScope, httpBackend, homeFactory, mockUrl, mockMainData;
+    var rootScope, httpBackend, homeFactory, mockUrl, mockHomeData;
 
     beforeEach(function () {
         module('JetThunder2');
-        module('mockMainData.json');
+        module('mockHomeData.json');
         module(function($urlRouterProvider) {
             $urlRouterProvider.deferIntercept();
         });
-        inject(function ($rootScope, $httpBackend, _homeFactory_, _mockMainData_) {
+        inject(function ($rootScope, $httpBackend, _homeFactory_, _mockHomeData_) {
             rootScope = $rootScope;
             httpBackend = $httpBackend;
             homeFactory = _homeFactory_;
-            mockMainData = _mockMainData_;
+            mockHomeData = _mockHomeData_;
         });
     });
 
@@ -27,9 +27,9 @@ describe('JetThunder2 Main: Factory', function () {
     describe('Main Factory Tests', function () {
         it('Should return the correct data when a successful http request is made calling getBlogItems()', function () {
             mockUrl = 'app/data/blog.json';
-            httpBackend.when('GET', mockUrl).respond(mockMainData);
+            httpBackend.when('GET', mockUrl).respond(mockHomeData);
             homeFactory.getBlogItems().then(function (result) {
-                expect(result).toEqual(mockMainData)
+                expect(result).toEqual(mockHomeData)
             });
             httpBackend.flush();
         });
